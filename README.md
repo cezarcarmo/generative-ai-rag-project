@@ -18,6 +18,9 @@ generative-ai-rag-project/
 ├── README.md
 ├── docs/
 │   ├── introduction.md
+|   ├── diagrams/
+│       ├── arquitetura.puml
+│       └── arquitetura.png  
 │   ├── architecture.md
 │   ├── tools-and-cases.md
 ├── src/
@@ -34,3 +37,6 @@ generative-ai-rag-project/
 └── LICENSE
 ```
 
+# Arquitetura
+
+![Diagrama de Arquitetura](./docs/diagrams/arquitetura.png)

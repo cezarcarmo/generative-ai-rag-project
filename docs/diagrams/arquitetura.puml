@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+package "Base de Dados" {
+    component "AWS S3" as S3
+    component "DynamoDB" as DynamoDB
+}
+
+package "Recuperação de Informação" {
+    component "ElasticSearch" as ElasticSearch
+    component "Pinecone" as Pinecone
+}
+
+package "Geração de Respostas" {
+    component "OpenAI GPT" as OpenAI
+    component "AWS Bedrock" as Bedrock
+    component "LangChain" as LangChain
+}
+
+package "Agentes" {
+    component "LangGraph" as LangGraph
+}
+
+S3 --> ElasticSearch : brown
+DynamoDB --> Pinecone : brown
+ElasticSearch --> LangChain : blue
+Pinecone --> LangChain : blue
+LangChain --> OpenAI : green
+LangChain --> Bedrock : green
+LangChain --> LangGraph : purple
+@enduml
